@@ -2,8 +2,8 @@
 
 ## 🔖Layout
 <p >
-	  <img alt="Layout" src="https://raw.githubusercontent.com/andreydantasvf/GitFav/main/images/layout.png?token=GHSAT0AAAAAABZXE7PDRABHH2V4FULMOBJEY3YIBHA" widht="400px" height="400px">
-	  <img alt="Layout" src="https://raw.githubusercontent.com/andreydantasvf/IMC/main/assets/layout.png?token=GHSAT0AAAAAABZXE7PDRABHH2V4FULMOBJEY3YIBHA" widht="400px" height="400px">
+	  <img alt="Layout" src="https://raw.githubusercontent.com/andreydantasvf/GitFav/main/images/layout.png" widht="400px" height="400px">
+	  <img alt="Layout" src="https://raw.githubusercontent.com/andreydantasvf/GitFav/main/images/no-favorites.png" widht="400px" height="400px">
 	   </p>
  
   
