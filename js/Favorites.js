@@ -69,29 +69,31 @@ export class FavoritesView extends Favorites {
     }
 
     update() {
-        this.removeAllTr()
+            this.emptyState()
+            
+            this.removeAllTr()
 
-        this.entries.forEach((user) => {
-            const row = this.createRow()
+            this.entries.forEach((user) => {
+                const row = this.createRow()
 
-            row.querySelector('.user img').src = `https://github.com/${user.login}.png`
-            row.querySelector('.user img').alt = `Imagem de ${user.name}`
-            row.querySelector('.user a').href = `https://github.com/${user.login}`
-            row.querySelector('.user p').textContent = user.name
-            row.querySelector('.user span').textContent = user.login
-            row.querySelector('.repositories').textContent = user.public_repos
-            row.querySelector('.followers').textContent = user.followers
+                row.querySelector('.user img').src = `https://github.com/${user.login}.png`
+                row.querySelector('.user img').alt = `Imagem de ${user.name}`
+                row.querySelector('.user a').href = `https://github.com/${user.login}`
+                row.querySelector('.user p').textContent = user.name
+                row.querySelector('.user span').textContent = user.login
+                row.querySelector('.repositories').textContent = user.public_repos
+                row.querySelector('.followers').textContent = user.followers
 
-            row.querySelector('.remove').onclick = () => {
-                const isOk = confirm('Tem certeza que deseja deletar essa linha?')
+                row.querySelector('.remove').onclick = () => {
+                    const isOk = confirm('Tem certeza que deseja deletar essa linha?')
 
-                if (isOk) {
-                    this.delete(user)
+                    if (isOk) {
+                        this.delete(user)
+                    }
                 }
-            }
 
-            this.tbody.append(row)
-        })
+                this.tbody.append(row)
+            })
     }
 
     createRow() {
@@ -110,7 +112,7 @@ export class FavoritesView extends Favorites {
             </td>
             <td class="repositories">76</td>
             <td class="followers">9589</td>
-            <td><button class="remove">&times;</button></td>
+            <td><button class="remove">Remover</button></td>
         `
 
         return tr
@@ -121,5 +123,16 @@ export class FavoritesView extends Favorites {
             .forEach((tr) => {
                 tr.remove()
             })
+    }
+
+    emptyState() {
+        const divNoFavorite = this.root.querySelector('.no-favorite')
+
+        if(this.entries.length === 0) {
+            divNoFavorite.classList.remove('hide')
+        }
+        else {
+            divNoFavorite.classList.add('hide')
+        }
     }
 }
