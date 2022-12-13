@@ -25,7 +25,7 @@
 **Clone o Projeto e acesse o Diretório**
 
 ```bash
-$ git clone https://github.com/andreydantasvf/GitFav&& cd GitFav
+$ git clone https://github.com/andreydantasvf/GitFav && cd GitFav
 ```
 
 **Siga os passos abaixo**
